@@ -1,4 +1,4 @@
-package com.mrswimmer.shiftwatch.presentation
+package com.mrswimmer.shiftwatch.presentation.fragment.profile
 
 
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.mrswimmer.shiftwatch.R
 
-class MenuFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-
-        return inflater.inflate(R.layout.fragment_menu, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
 

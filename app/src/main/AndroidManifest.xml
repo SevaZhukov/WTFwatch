@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
+        android:name=".App"
         android:theme="@style/Shift">
         <activity android:name=".presentation.activity.MainActivity">
             <intent-filter>

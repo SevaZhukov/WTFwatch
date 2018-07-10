@@ -1,4 +1,5 @@
-package com.mrswimmer.shiftwatch.presentation
+package com.mrswimmer.shiftwatch.presentation.fragment.task
+
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,13 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.mrswimmer.shiftwatch.R
 
-class SettingsFragment : Fragment() {
 
+class TaskFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_task, container, false)
     }
+
 
 }

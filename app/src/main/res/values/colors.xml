@@ -12,4 +12,16 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
+    <color name="green">#388e3c</color>
+    <color name="red">#d32f2f</color>
+    <color name="yellow">#ffc107</color>
+    <color name="blue">#303f9f</color>
+
+    <color name="yellow2">#FFA000</color>
+    <color name="yellow3">#757575</color>
+    <color name="yellow4">#ffeb3b</color>
+
+    <color name="green2">#8BC34A</color>
+    <color name="green3">#4CAF50</color>
+    <color name="green4">#757575</color>
 </resources>

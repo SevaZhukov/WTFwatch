@@ -1,4 +1,4 @@
-package com.mrswimmer.shiftwatch.presentation
+package com.mrswimmer.shiftwatch.presentation.fragment.sign_in
 
 import android.content.Intent
 import android.os.Bundle
@@ -20,6 +20,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.mrswimmer.shift.domain.interactor.FireService
+import com.mrswimmer.shiftwatch.App
 import com.mrswimmer.shiftwatch.R
 import javax.inject.Inject
 
@@ -33,15 +34,25 @@ class SignInFragment : Fragment() {
     lateinit var mGoogleSignInClient: GoogleSignInClient
     var auth = FirebaseAuth.getInstance()
     private val RC_SIGN_IN = 9001
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_sign_in, container, false)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        App.getComponent().inject(this)
         navController = Navigation.findNavController(activity!!, R.id.nav_host_fragment)
+        if (fireService.isSignedIn())
+            navController.navigate(R.id.menuFragment)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(resources.getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build()
         mGoogleSignInClient = GoogleSignIn.getClient(activity!!, gso)
-        return inflater.inflate(R.layout.fragment_sign_in, container, false)
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.mrswimmer.shiftwatch.presentation.SignInFragment"
+        android:name="com.mrswimmer.shiftwatch.presentation.fragment.sign_in.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.mrswimmer.shiftwatch.presentation.MenuFragment"
+        android:name="com.mrswimmer.shiftwatch.presentation.fragment.menu.MenuFragment"
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
         <action
@@ -31,17 +31,17 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.mrswimmer.shiftwatch.presentation.SettingsFragment"
+        android:name="com.mrswimmer.shiftwatch.presentation.fragment.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/taskFragment"
-        android:name="com.mrswimmer.shiftwatch.presentation.TaskFragment"
+        android:name="com.mrswimmer.shiftwatch.presentation.fragment.task.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.mrswimmer.shiftwatch.presentation.ProfileFragment"
+        android:name="com.mrswimmer.shiftwatch.presentation.fragment.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

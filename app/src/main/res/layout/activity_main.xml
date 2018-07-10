@@ -11,6 +11,6 @@
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:navGraph="@navigation/nav_graph"
-        app:defaultNavHost="true"
+        app:defaultNavHost="false"
         />
 </android.support.constraint.ConstraintLayout>
