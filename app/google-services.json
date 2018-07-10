@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "946763983046",
+    "firebase_url": "https://shift-d39fd.firebaseio.com",
+    "project_id": "shift-d39fd",
+    "storage_bucket": "shift-d39fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946763983046:android:bdfc08a298383351",
+        "android_client_info": {
+          "package_name": "android.bignerdranch.com.pushtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946763983046-ebcbi7db86iesce40ns4fvu9rd6560g5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.bignerdranch.com.pushtest",
+            "certificate_hash": "de7f5e85f3c3437764cf3ea275fda856924ae22a"
+          }
+        },
+        {
+          "client_id": "946763983046-065noua4nl7idqsdv949cvq1dgu1lgvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSdJIurRLiIHRJ5rpPXW7orEqMSUkYd-g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946763983046-065noua4nl7idqsdv949cvq1dgu1lgvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946763983046:android:44596478d0b8f515",
+        "android_client_info": {
+          "package_name": "com.mrswimmer.shift"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946763983046-slvcpus5iohbndn7c0oh5qsgcdqk94me.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mrswimmer.shift",
+            "certificate_hash": "ac573ad156e66ec67875733996910b55279360e2"
+          }
+        },
+        {
+          "client_id": "946763983046-065noua4nl7idqsdv949cvq1dgu1lgvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSdJIurRLiIHRJ5rpPXW7orEqMSUkYd-g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946763983046-065noua4nl7idqsdv949cvq1dgu1lgvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946763983046:android:2646dd2702d44c41",
+        "android_client_info": {
+          "package_name": "com.mrswimmer.shiftwatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946763983046-il5tpfdhpqr613fftgpbt0h0e9e03u92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mrswimmer.shiftwatch",
+            "certificate_hash": "ac573ad156e66ec67875733996910b55279360e2"
+          }
+        },
+        {
+          "client_id": "946763983046-065noua4nl7idqsdv949cvq1dgu1lgvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSdJIurRLiIHRJ5rpPXW7orEqMSUkYd-g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946763983046-065noua4nl7idqsdv949cvq1dgu1lgvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
