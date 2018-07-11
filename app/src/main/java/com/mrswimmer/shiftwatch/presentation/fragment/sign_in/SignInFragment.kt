@@ -23,11 +23,10 @@ import com.mrswimmer.shift.domain.interactor.FireService
 import com.mrswimmer.shiftwatch.App
 import com.mrswimmer.shiftwatch.R
 import com.mrswimmer.shiftwatch.presentation.base.BaseFragment
+import org.jetbrains.annotations.Nullable
 import javax.inject.Inject
 
 class SignInFragment : BaseFragment() {
-
-    lateinit var navController: NavController
 
     @Inject
     lateinit var fireService: FireService
@@ -35,12 +34,11 @@ class SignInFragment : BaseFragment() {
     private val TAG = "code"
     lateinit var mGoogleSignInClient: GoogleSignInClient
     var auth = FirebaseAuth.getInstance()
+
     private val RC_SIGN_IN = 9001
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        navController = Navigation.findNavController(activity!!, R.id.nav_host_fragment)
         if (fireService.isSignedIn())
             navController.navigate(R.id.menuFragment)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -48,7 +46,6 @@ class SignInFragment : BaseFragment() {
                 .requestEmail()
                 .build()
         mGoogleSignInClient = GoogleSignIn.getClient(activity!!, gso)
-
     }
 
     override fun injectDependencies() {
@@ -60,6 +57,7 @@ class SignInFragment : BaseFragment() {
     }
 
 
+    @Nullable
     @OnClick(R.id.sign_in_button_google)
     internal fun onGoogleClick() {
         val signInIntent = mGoogleSignInClient.getSignInIntent()

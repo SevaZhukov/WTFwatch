@@ -6,15 +6,23 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.mrswimmer.shiftwatch.App
 import com.mrswimmer.shiftwatch.R
+import com.mrswimmer.shiftwatch.presentation.base.BaseFragment
+import com.mrswimmer.shiftwatch.presentation.fragment.menu.MenuFragmentPresenter
 
 
-class TaskFragment : Fragment() {
+class TaskFragment : BaseFragment() {
+    override fun injectDependencies() {
+        App.getComponent().inject(this)
+    }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_task, container, false)
+    override fun getLayoutID(): Int {
+        return R.layout.fragment_task
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
     }
 
 

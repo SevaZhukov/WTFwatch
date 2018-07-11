@@ -8,7 +8,10 @@ import com.mrswimmer.shiftwatch.di.module.FireModule;
 import com.mrswimmer.shiftwatch.di.module.SharedPreferencesModule;
 import com.mrswimmer.shiftwatch.presentation.fragment.menu.MenuFragment;
 import com.mrswimmer.shiftwatch.presentation.fragment.profile.ProfileFragment;
+import com.mrswimmer.shiftwatch.presentation.fragment.menu.MenuFragmentPresenter;
+import com.mrswimmer.shiftwatch.presentation.fragment.settings.SettingsFragment;
 import com.mrswimmer.shiftwatch.presentation.fragment.sign_in.SignInFragment;
+import com.mrswimmer.shiftwatch.presentation.fragment.task.TaskFragment;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -30,4 +33,10 @@ public interface AppComponent {
     void inject(@NotNull MenuFragment menuFragment);
 
     void inject(@NotNull ProfileFragment profileFragment);
+
+    void inject(@NotNull MenuFragmentPresenter menuFragmentPresenter);
+
+    void inject(@NotNull SettingsFragment settingsFragment);
+
+    void inject(@NotNull TaskFragment taskFragment);
 }

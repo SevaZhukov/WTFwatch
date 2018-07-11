@@ -1,19 +1,33 @@
 package com.mrswimmer.shiftwatch.presentation.fragment.menu
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import butterknife.BindView
 import butterknife.OnClick
+import com.arellomobile.mvp.presenter.InjectPresenter
+import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.mrswimmer.shiftwatch.App
 import com.mrswimmer.shiftwatch.R
-import com.mrswimmer.shiftwatch.presentation.base.BaseFragment
+import com.mrswimmer.shiftwatch.presentation.base.BaseMvpFragment
 
-class MenuFragment : BaseFragment() {
+class MenuFragment : BaseMvpFragment(), MenuFragmentView {
+    override fun showErrorMessage() {
+        showToast("Ошибка загрузки")
+    }
+
+    override fun showEmptyTasksMessage() {
+        showToast("Для вас пока нет задач")
+    }
+
+    override fun goToTask() {
+        navController.navigate(R.id.taskFragment)
+    }
+
+    @InjectPresenter
+    lateinit var presenter: MenuFragmentPresenter
+
+    @ProvidePresenter
+    fun presenter(): MenuFragmentPresenter {
+        return MenuFragmentPresenter()
+    }
 
     override fun injectDependencies() {
         App.getComponent().inject(this)
@@ -29,7 +43,7 @@ class MenuFragment : BaseFragment() {
 
     @OnClick(R.id.menu_exit)
     fun onExitClick() {
-        activity.finish()
+        activity!!.finish()
     }
 
     @OnClick(R.id.menu_settings)
@@ -44,6 +58,6 @@ class MenuFragment : BaseFragment() {
 
     @OnClick(R.id.menu_task)
     fun onTaskClick() {
-        navController.navigate(R.id.taskFragment)
+        presenter.setDataListener()
     }
 }

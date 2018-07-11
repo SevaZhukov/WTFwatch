@@ -1,10 +1,10 @@
 package com.mrswimmer.shiftwatch.presentation.base;
 
-import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,14 +25,13 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        injectDependencies();
         navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        injectDependencies();
         //setRetainInstance(true);
         return inflater.inflate(getLayoutID(), container, false);
     }
