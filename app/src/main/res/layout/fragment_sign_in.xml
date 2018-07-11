@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="WTF"
             android:textColor="@android:color/white"
-            android:textSize="50sp"
+            android:textSize="70sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:text="?"
             android:textColor="@color/accent"
-            android:textSize="50sp"
+            android:textSize="70sp"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/textView" />
 

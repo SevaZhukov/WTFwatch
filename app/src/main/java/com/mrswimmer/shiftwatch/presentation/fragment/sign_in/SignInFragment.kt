@@ -22,9 +22,11 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.mrswimmer.shift.domain.interactor.FireService
 import com.mrswimmer.shiftwatch.App
 import com.mrswimmer.shiftwatch.R
+import com.mrswimmer.shiftwatch.presentation.base.BaseFragment
 import javax.inject.Inject
 
-class SignInFragment : Fragment() {
+class SignInFragment : BaseFragment() {
+
     lateinit var navController: NavController
 
     @Inject
@@ -35,14 +37,9 @@ class SignInFragment : Fragment() {
     var auth = FirebaseAuth.getInstance()
     private val RC_SIGN_IN = 9001
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_sign_in, container, false)
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        App.getComponent().inject(this)
+
         navController = Navigation.findNavController(activity!!, R.id.nav_host_fragment)
         if (fireService.isSignedIn())
             navController.navigate(R.id.menuFragment)
@@ -52,13 +49,16 @@ class SignInFragment : Fragment() {
                 .build()
         mGoogleSignInClient = GoogleSignIn.getClient(activity!!, gso)
 
-
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        ButterKnife.bind(this, view)
+    override fun injectDependencies() {
+        App.getComponent().inject(this)
     }
+
+    override fun getLayoutID(): Int {
+        return R.layout.fragment_sign_in
+    }
+
 
     @OnClick(R.id.sign_in_button_google)
     internal fun onGoogleClick() {

@@ -8,22 +8,42 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import butterknife.BindView
+import butterknife.OnClick
 import com.mrswimmer.shiftwatch.App
 import com.mrswimmer.shiftwatch.R
+import com.mrswimmer.shiftwatch.presentation.base.BaseFragment
 
-class MenuFragment : Fragment() {
-    lateinit var navController: NavController
+class MenuFragment : BaseFragment() {
 
-    @BindView(R.id.)
+    override fun injectDependencies() {
+        App.getComponent().inject(this)
+    }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_menu, container, false)
+    override fun getLayoutID(): Int {
+        return R.layout.fragment_menu
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        App.getComponent().inject(this)
-        navController = Navigation.findNavController(activity!!, R.id.nav_host_fragment)
+    }
+
+    @OnClick(R.id.menu_exit)
+    fun onExitClick() {
+        activity.finish()
+    }
+
+    @OnClick(R.id.menu_settings)
+    fun onSettingsClick() {
+        navController.navigate(R.id.settingsFragment)
+    }
+
+    @OnClick(R.id.menu_profile)
+    fun onProfileClick() {
+        navController.navigate(R.id.profileFragment)
+    }
+
+    @OnClick(R.id.menu_task)
+    fun onTaskClick() {
+        navController.navigate(R.id.taskFragment)
     }
 }
